@@ -1,7 +1,5 @@
 name: Docker Compose CI
 
-name: Docker Compose CI
-
 on:
   push:
     branches: [ infra-framwork ]
