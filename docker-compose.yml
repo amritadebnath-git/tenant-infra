@@ -1,5 +1,6 @@
 
 
+
 services:
   web:
     build: .
@@ -7,12 +8,7 @@ services:
       - "5000:5000"
     volumes:
       - ./app:/app
-    depends_on:
-      - db
+    environment:
+      - FLASK_ENV=development
 
-  db:
-    image: busybox
-    volumes:
-      - ./app/users.db:/data/users.db
-    command: tail -f /dev/null
 

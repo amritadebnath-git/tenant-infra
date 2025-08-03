@@ -1,6 +1,7 @@
 import unittest
 import uuid
-from app.app import app
+import sys
+from app import app
 
 class FlaskTestCase(unittest.TestCase):
 
@@ -24,4 +25,7 @@ class FlaskTestCase(unittest.TestCase):
         self.assertIn(b"Account created! Please login.", response.data)
 
 if __name__ == "__main__":
-    unittest.main()
+    if len(sys.argv) > 1 and sys.argv[1] == "runserver":
+        app.run(debug=True)
+    else:
+        unittest.main()
