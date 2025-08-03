@@ -63,6 +63,3 @@ jobs:
           context: .
           push: true
           tags: "amritadebnathdocker/my-flask-app:latest"
-
-	
-  
