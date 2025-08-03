@@ -4,6 +4,7 @@ WORKDIR /app
 
 # Copy all app files directly
 COPY app/Test_app.py .
+COPY app/app.py .
 COPY app/users.db .
 COPY app/templates ./templates
 COPY requirements.txt .
